@@ -1,33 +1,33 @@
-�L����X�p�C�@�\�Ȃǂ𖳌��ɂ���hosts�t�@�C���X�V�v���W�F�N�g
+広告やスパイ機能などを無効にするhostsファイル更新プロジェクト
 =============================================================
 
-�p�\�R����X�}�z�i�u���E�U�[��A�v���j�ōL����\�������Ȃ����Ƃ��ł����炢���Ǝv���܂��񂩁H
+パソコンやスマホ（ブラウザーやアプリ）で広告を表示させないことができたらいいと思いませんか？
 
-�\�����Ȃ��Ȃ邾���ł͂Ȃ��A���ʂȒʐM���Ȃ������Ƃ��ł��܂��B
+表示がなくなるだけではなく、無駄な通信をなくすことができます。
 
-�L���ɂ���Ă͎q���Ɍ������Ȃ��悤�Ȃ��̂�����܂����A��l�ł��e��L���͂킸��킵�����̂ł��B�ςȃA�h�E�F�A�����邱�Ƃ�h�~���邱�Ƃɂ��Ȃ�܂��B
+広告によっては子供に見せられないようなものもありますし、大人でも各種広告はわずらわしいものです。変なアドウェアが入ることを防止することにもなります。
 
-[hosts�t�@�C��](http://ja.wikipedia.org/wiki/Hosts)�Ƃ́A�uTCP/IP�𗘗p����R���s���[�^�ɂ�����z�X�g���̃f�[�^�x�[�X�ŁAIP�A�h���X�ƃz�X�g���̑Ή����L�q�����e�L�X�g�t�@�C���v�̂��Ƃł��B
+[hostsファイル](http://ja.wikipedia.org/wiki/Hosts)とは、「TCP/IPを利用するコンピュータにおけるホスト名のデータベースで、IPアドレスとホスト名の対応を記述したテキストファイル」のことです。
 
-���̃t�@�C���ɁA���L�̂悤�ɃA�N�Z�X�������Ȃ��z�X�g�����L�ڂ��邱�Ƃɂ���āA����̃z�X�g������̍L���A�摜�A�X�p�C�@�\�A�X�N���v�g�Ȃǂ̎�M�𖳌��ɂ��邱�Ƃ��ł��܂��B
+このファイルに、下記のようにアクセスしたくないホスト名を記載することによって、特定のホスト名からの広告、画像、スパイ機能、スクリプトなどの受信を無効にすることができます。
 
 	0.0.0.0 px.a8.net
 
-����ɂ���āApx.a8.net�ɂ̓A�N�Z�X�ł��Ȃ��Ȃ�܂��B
+これによって、px.a8.netにはアクセスできなくなります。
 
-�g�p�@
+使用法
 ------
 
-Windows�ł́AC:\Windows\System32\Drivers\Etc\hosts �i�v�Ǘ��Ҍ����j
-Mac�ł́A/private/etc/hosts
-Android�ł́A/system/etc/hosts �i�vroot�j
+Windowsでは、C:\Windows\System32\Drivers\Etc\hosts （要管理者権限）
+Macでは、/private/etc/hosts
+Androidでは、/system/etc/hosts （要root）
 
-���㏑�����܂��B
+を上書きします。
 
-���j
+方針
 ----
 
-�A�N�Z�X�������Ȃ��z�X�g�����A�N�Z�X�������ȃz�X�g���Ɠ����ꍇ�ł����ڂ����܂��B
-�Ⴆ�΁A�y�V�s��̍L���́uwww.rakuten.co.jp�v�̃z�X�g���Ŕz�M����܂��̂ŁA���̍��ڂ����āA�uwww.rakuten.co.jp�v�ɂ̓A�N�Z�X�ł��Ȃ��悤�ɂ��܂��B
-�����A�N�Z�X����K�v������΁A�o�b�`�t�@�C����X�N���v�g�Ȃǂňꎞ�I�Ƀ��l�[������悤�ɂ���Ƃ����ł��傤�B
+アクセスしたくないホスト名がアクセスしそうなホスト名と同じ場合でも項目を入れます。
+例えば、楽天市場の広告は「www.rakuten.co.jp」のホスト名で配信されますので、その項目を入れて、「www.rakuten.co.jp」にはアクセスできないようにします。
+もしアクセスする必要があれば、バッチファイルやスクリプトなどで一時的にリネームするようにするといいでしょう。
 
