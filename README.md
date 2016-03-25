@@ -18,16 +18,25 @@
 使用法
 ------
 
-Windowsでは、C:\Windows\System32\Drivers\Etc\hosts （要管理者権限）
-Macでは、/private/etc/hosts
-Androidでは、/system/etc/hosts （要root）
+	Windowsでは、
+	C:\Windows\System32\Drivers\Etc\hosts （要管理者権限）
+	
+	Macでは、
+	/private/etc/hosts
 
-を上書きします。
+	Androidでは、
+	/system/etc/hosts （要root）
+
+を上書きします。hostsファイルには拡張子がありません。
 
 方針
 ----
 
 アクセスしたくないホスト名がアクセスしそうなホスト名と同じ場合でも項目を入れます。
+
 例えば、楽天市場の広告は「www.rakuten.co.jp」のホスト名で配信されますので、その項目を入れて、「www.rakuten.co.jp」にはアクセスできないようにします。
-もしアクセスする必要があれば、バッチファイルやスクリプトなどで一時的にリネームするようにするといいでしょう。
+
+また、一部のGoogle関連のホスト名が入っていますので、Youtubeでコメントをする場合などに問題が発生することがあるようです。
+
+もし不都合が発生すれば、バッチファイルやスクリプトなどで一時的にリネームするようにするといいでしょう。
 
